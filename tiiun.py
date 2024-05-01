@@ -3,6 +3,8 @@ import json
 from pprint import pprint
 
 STATE_FILE = "wideq_state.json"
+COUNTRY = "KR"
+LANGUAGE = "ko-KR"
 
 def authenticate(gateway):
     login_url = gateway.oauth_url()
@@ -12,14 +14,23 @@ def authenticate(gateway):
     callback_url = input()
     return wideq.Auth.from_url(gateway, callback_url)
 
-with open(STATE_FILE) as f:
-    state = json.load(f)
+try:
+    with open(STATE_FILE) as f:
+        state = json.load(f)
+except:
+    state = {}
 
 client = wideq.Client.load(state)
-client.refresh()
+client._country = COUNTRY
+client._language = LANGUAGE
 
 if not client._auth:
     client._auth = authenticate(client.gateway)
+    state = client.dump()
+    with open(STATE_FILE, "w") as f:
+        json.dump(state, f)
+else:
+    client.refresh()
 
 for device in client.devices:
     print(f"{device.id}: {device.name} ({device.type.name} {device.model_id} / {device.platform_type})")
