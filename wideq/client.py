@@ -255,6 +255,7 @@ class DeviceType(enum.Enum):
     REFRIGERATOR = 101
     KIMCHI_REFRIGERATOR = 102
     WATER_PURIFIER = 103
+    TIIUN_MINI = 106
     WASHER = 201
     DRYER = 202
     STYLER = 203
