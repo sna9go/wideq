@@ -1,10 +1,8 @@
-[![PyPI](https://img.shields.io/pypi/v/wideq.svg)](https://pypi.org/project/wideq/)
-[![CircleCI](https://circleci.com/gh/sampsyo/wideq.svg?style=svg)](https://circleci.com/gh/sampsyo/wideq)
-
-WideQ
+WideQ v2
 =====
 
-:warning: **New users of LG SmartThinq**: This library only works with v1 of the LG SmartThinq API. Work is currently underway to support the v2 API, and the discussion can be found [here](https://github.com/sampsyo/wideq/pull/100). If you recently created a LG SmartThinq account, this library will likely return 0 devices when you execute the `ls` command.
+- Support LG SmartThinQ v2
+- Support LG TIIUN MINI
 
 A library for interacting with the "LG SmartThinq" system, which can control heat pumps and such. I reverse-engineered the API from their mobile app.
 
