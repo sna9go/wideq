@@ -4,6 +4,8 @@ WideQ v2
 - Support LG ThinQ v2
 - Support LG TIIUN MINI (Look at tiiun.py)
 
+![](images/tiiun.jpg)
+
 A library for interacting with the "LG SmartThinq" system, which can control heat pumps and such. I reverse-engineered the API from their mobile app.
 
 To try out the API, there is a simple command-line tool included here, called `example.py`.
