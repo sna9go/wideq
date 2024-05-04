@@ -1,3 +1,8 @@
+# https://mitmproxy.org/
+
+# https://pypi.org/project/wideq/
+
+
 WideQ v2
 =====
 
